@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.6 on win32)" generated="20220721 18:11:27.626" rpa="false" schemaversion="3">
+<suite id="s1" name="BodumSmokeTest" source="C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\test\smoke\BodumSmokeTest.robot">
+<test id="s1-t1" name="User add product to the cart" line="10">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Setup driver</arg>
+<arg>Close cookies</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="setup driver" library="resource">
+<kw name="Create Driver" library="CommonSteps">
+<msg timestamp="20220721 18:11:30.437" level="INFO">Start browser Chrome for smoke..
+
+Checking for win32 chromedriver:103.0.5060.134 in cache
+Driver found in C:\Users\Aleh.Sinkou\.wdm\chromedriver\103.0.5060.134\win32/chromedriver.exe</msg>
+<status status="PASS" starttime="20220721 18:11:28.014" endtime="20220721 18:11:30.437"/>
+</kw>
+<timeout value="1 minute"/>
+<status status="PASS" starttime="20220721 18:11:28.014" endtime="20220721 18:11:30.437"/>
+</kw>
+<kw name="close cookies" library="resource">
+<kw name="Close Cookies" library="CommonSteps">
+<status status="PASS" starttime="20220721 18:11:30.438" endtime="20220721 18:11:32.824"/>
+</kw>
+<status status="PASS" starttime="20220721 18:11:30.437" endtime="20220721 18:11:32.824"/>
+</kw>
+<status status="PASS" starttime="20220721 18:11:28.014" endtime="20220721 18:11:32.825"/>
+</kw>
+<kw name="Click Category" library="MainPage">
+<arg>2</arg>
+<status status="PASS" starttime="20220721 18:11:32.825" endtime="20220721 18:11:34.977"/>
+</kw>
+<kw name="Click Sub Category" library="MainPage">
+<arg>2</arg>
+<status status="PASS" starttime="20220721 18:11:34.978" endtime="20220721 18:11:35.663"/>
+</kw>
+<kw name="Hover Over Item" library="MainPage">
+<arg>2</arg>
+<status status="PASS" starttime="20220721 18:11:35.663" endtime="20220721 18:11:38.128"/>
+</kw>
+<kw name="Click Add To Cart" library="MainPage">
+<arg>2</arg>
+<status status="PASS" starttime="20220721 18:11:38.128" endtime="20220721 18:11:38.255"/>
+</kw>
+<kw name="Change Item Entity To" library="ItemPage">
+<arg>5</arg>
+<status status="PASS" starttime="20220721 18:11:38.256" endtime="20220721 18:11:38.901"/>
+</kw>
+<kw name="Grab Item Name" library="ItemPage">
+<var>${item name}</var>
+<msg timestamp="20220721 18:11:38.929" level="INFO">${item name} = POUR OVER</msg>
+<status status="PASS" starttime="20220721 18:11:38.902" endtime="20220721 18:11:38.929"/>
+</kw>
+<kw name="Grab Item Price" library="ItemPage">
+<var>${item price}</var>
+<msg timestamp="20220721 18:11:44.186" level="INFO">${item price} = £90.00</msg>
+<status status="PASS" starttime="20220721 18:11:38.929" endtime="20220721 18:11:44.186"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${item name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220721 18:11:44.186" endtime="20220721 18:11:44.187"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${item price}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220721 18:11:44.187" endtime="20220721 18:11:44.187"/>
+</kw>
+<kw name="Click Add Item To Card" library="ItemPage">
+<status status="PASS" starttime="20220721 18:11:44.188" endtime="20220721 18:11:44.303"/>
+</kw>
+<kw name="Click Go To Cart" library="SubcategoryItems">
+<status status="PASS" starttime="20220721 18:11:44.303" endtime="20220721 18:11:45.698"/>
+</kw>
+<kw name="Get Product Name" library="SideMenuCart">
+<var>${cart name}</var>
+<msg timestamp="20220721 18:11:45.806" level="INFO">${cart name} = POUR OVER</msg>
+<status status="PASS" starttime="20220721 18:11:45.699" endtime="20220721 18:11:45.806"/>
+</kw>
+<kw name="Get Product Price" library="SideMenuCart">
+<var>${cart price}</var>
+<msg timestamp="20220721 18:11:51.018" level="INFO">${cart price} = £90.00</msg>
+<status status="PASS" starttime="20220721 18:11:45.807" endtime="20220721 18:11:51.018"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${item name}</arg>
+<arg>${cart name}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220721 18:11:51.019" endtime="20220721 18:11:51.019"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${item price}</arg>
+<arg>${cart price}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220721 18:11:51.019" endtime="20220721 18:11:51.019"/>
+</kw>
+<kw name="destroy driver" library="resource" type="TEARDOWN">
+<kw name="Destroy Driver" library="CommonSteps">
+<msg timestamp="20220721 18:11:53.213" level="INFO">destroy browser..
+clear env..</msg>
+<status status="PASS" starttime="20220721 18:11:51.020" endtime="20220721 18:11:53.213"/>
+</kw>
+<status status="PASS" starttime="20220721 18:11:51.020" endtime="20220721 18:11:53.214"/>
+</kw>
+<doc>Put Testrail Link Here</doc>
+<tag>testrailid=111</tag>
+<status status="PASS" starttime="20220721 18:11:28.013" endtime="20220721 18:11:53.218"/>
+</test>
+<doc>User add product to the cart</doc>
+<status status="PASS" starttime="20220721 18:11:27.628" endtime="20220721 18:11:53.222"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">testrailid=111</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="BodumSmokeTest">BodumSmokeTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

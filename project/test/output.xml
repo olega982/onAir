@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.6 on win32)" generated="20220722 12:03:49.539" rpa="false" schemaversion="3">
+<suite id="s1" name="Smoke" source="C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\test\smoke">
+<suite id="s1-s1" name="BodumSmokeTest" source="C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\test\smoke\BodumSmokeTest.robot">
+<test id="s1-s1-t1" name="User add product to the cart" line="10">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Setup driver</arg>
+<arg>Close cookies</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="setup driver" library="resource">
+<kw name="CommonSteps.create driver">
+<msg timestamp="20220722 12:03:49.871" level="FAIL">No keyword with name 'CommonSteps.create driver' found.</msg>
+<status status="FAIL" starttime="20220722 12:03:49.871" endtime="20220722 12:03:49.871"/>
+</kw>
+<timeout value="1 minute"/>
+<status status="FAIL" starttime="20220722 12:03:49.867" endtime="20220722 12:03:49.872"/>
+</kw>
+<status status="FAIL" starttime="20220722 12:03:49.867" endtime="20220722 12:03:49.872"/>
+</kw>
+<kw name="destroy driver" library="resource" type="TEARDOWN">
+<kw name="CommonSteps.destroy driver">
+<msg timestamp="20220722 12:03:49.876" level="FAIL">No keyword with name 'CommonSteps.destroy driver' found.</msg>
+<status status="FAIL" starttime="20220722 12:03:49.876" endtime="20220722 12:03:49.876"/>
+</kw>
+<status status="FAIL" starttime="20220722 12:03:49.872" endtime="20220722 12:03:49.876">No keyword with name 'CommonSteps.destroy driver' found.</status>
+</kw>
+<doc>Put Testrail Link Here</doc>
+<tag>testrailid=111</tag>
+<status status="FAIL" starttime="20220722 12:03:49.866" endtime="20220722 12:03:49.876">Setup failed:
+No keyword with name 'CommonSteps.create driver' found.
+
+Also teardown failed:
+No keyword with name 'CommonSteps.destroy driver' found.</status>
+</test>
+<doc>User add product to the cart</doc>
+<status status="FAIL" starttime="20220722 12:03:49.561" endtime="20220722 12:03:49.876"/>
+</suite>
+<status status="FAIL" starttime="20220722 12:03:49.542" endtime="20220722 12:03:49.877"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">testrailid=111</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Smoke">Smoke</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="BodumSmokeTest">Smoke.BodumSmokeTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220722 12:03:49.568" level="ERROR">Error in file 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\resource\resource.robot' on line 2: Importing library 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages\ItemPage.py' failed: ModuleNotFoundError: No module named 'framework'
+Traceback (most recent call last):
+  File "C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages\ItemPage.py", line 1, in &lt;module&gt;
+    from framework.web_elements.browser_web_element import BrowserWebElement
+PYTHONPATH:
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_debug_adapter
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\test
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_ls\vendored
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib\site-packages</msg>
+<msg timestamp="20220722 12:03:49.572" level="ERROR">Error in file 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\resource\resource.robot' on line 3: Importing library 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages\LoginPage.py' failed: ModuleNotFoundError: No module named 'framework'
+Traceback (most recent call last):
+  File "C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages\LoginPage.py", line 1, in &lt;module&gt;
+    from framework.web_elements.browser_web_element import BrowserWebElement
+PYTHONPATH:
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_debug_adapter
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\test
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_ls\vendored
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib\site-packages</msg>
+<msg timestamp="20220722 12:03:49.575" level="ERROR">Error in file 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\resource\resource.robot' on line 4: Importing library 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages\MainPage.py' failed: ModuleNotFoundError: No module named 'framework'
+Traceback (most recent call last):
+  File "C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages\MainPage.py", line 1, in &lt;module&gt;
+    from framework.web_elements.browser_web_element import BrowserWebElement
+PYTHONPATH:
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_debug_adapter
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\test
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_ls\vendored
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib\site-packages</msg>
+<msg timestamp="20220722 12:03:49.578" level="ERROR">Error in file 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\resource\resource.robot' on line 5: Importing library 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages\SideMenuCart.py' failed: ModuleNotFoundError: No module named 'framework'
+Traceback (most recent call last):
+  File "C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages\SideMenuCart.py", line 1, in &lt;module&gt;
+    from framework.web_elements.browser_web_element import BrowserWebElement
+PYTHONPATH:
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_debug_adapter
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\test
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_ls\vendored
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib\site-packages</msg>
+<msg timestamp="20220722 12:03:49.581" level="ERROR">Error in file 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\resource\resource.robot' on line 6: Importing library 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages\SubcategoryItems.py' failed: ModuleNotFoundError: No module named 'framework'
+Traceback (most recent call last):
+  File "C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages\SubcategoryItems.py", line 1, in &lt;module&gt;
+    from framework.web_elements.browser_web_element import BrowserWebElement
+PYTHONPATH:
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\pages
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_debug_adapter
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\test
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_ls\vendored
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib\site-packages</msg>
+<msg timestamp="20220722 12:03:49.692" level="ERROR">Error in file 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\resource\resource.robot' on line 7: Importing library 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\resource\CommonSteps.py' failed: ModuleNotFoundError: No module named 'framework'
+Traceback (most recent call last):
+  File "C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\resource\CommonSteps.py", line 2, in &lt;module&gt;
+    from framework.browser.browser_factory import DriverFactory
+PYTHONPATH:
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\resource
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_debug_adapter
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\test
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_ls\vendored
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib\site-packages</msg>
+<msg timestamp="20220722 12:03:49.694" level="ERROR">Error in file 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\resource\resource.robot' on line 9: Importing library 'CommonSteps' failed: ModuleNotFoundError: No module named 'CommonSteps'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_debug_adapter
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\test
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_ls\vendored
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib\site-packages</msg>
+<msg timestamp="20220722 12:03:49.696" level="ERROR">Error in file 'C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\resource\resource.robot' on line 10: Importing library 'LoginPage' failed: ModuleNotFoundError: No module named 'LoginPage'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_debug_adapter
+  C:\Users\Aleh.Sinkou\Documents\Training autotestgs\bodum tests python\project\test
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib
+  C:\Users\Aleh.Sinkou\AppData\Roaming\JetBrains\PyCharmCE2021.2\plugins\robotframework-intellij\lib\robotframework_ls\vendored
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39
+  C:\Users\Aleh.Sinkou\AppData\Local\Programs\Python\Python39\lib\site-packages</msg>
+</errors>
+</robot>
