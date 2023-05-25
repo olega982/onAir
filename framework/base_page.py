@@ -1,4 +1,4 @@
-from framework.browser.driver_factory import DriverManager
+from framework.browser.driver_manager import DriverManager
 
 
 class BasePage:
@@ -9,5 +9,3 @@ class BasePage:
         self.browser = DriverManager.get_driver()
         self.browser.implicitly_wait(BasePage.DRIVER_WAIT_TIME)
 
-    # def open(self, url):
-    #     self.browser.get(url)
