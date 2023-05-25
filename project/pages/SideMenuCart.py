@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 
 class SideMenuCart:
     first_product_name = BrowserWebElement(By.CSS_SELECTOR, ".cartProductCategory")
-    first_product_crossed_price = BrowserWebElement(By.CSS_SELECTOR, ".cartProductPrice span:nth-child(1)")
-    first_product_real_price = BrowserWebElement(By.CSS_SELECTOR, ".cartProductPrice span:nth-child(2)")
+    first_product_real_price = BrowserWebElement(By.CSS_SELECTOR, ".cartProductPrice span:nth-child(1)")
+    first_product_crossed_price = BrowserWebElement(By.CSS_SELECTOR, ".cartProductPrice span:nth-child(2)")
     close_icon = BrowserWebElement(By.CSS_SELECTOR, ".cartClose")
     first_product_delete_icon = BrowserWebElement(By.CSS_SELECTOR, ".btnDelete")
     delete_item_confirm = BrowserWebElement(By.CSS_SELECTOR, ".blackTransparent")
@@ -16,9 +16,9 @@ class SideMenuCart:
 
     @classmethod
     def get_product_price(self):
-        if self.first_product_real_price.is_element_present():
-            return self.first_product_real_price.get_text()
-        return self.first_product_crossed_price.get_text()
+        if self.first_product_crossed_price.is_element_present():
+            return self.first_product_crossed_price.get_text()
+        return self.first_product_real_price.get_text()
 
     @classmethod
     def close_cart(self): self.close_icon.click()

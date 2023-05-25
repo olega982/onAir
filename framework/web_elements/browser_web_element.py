@@ -6,7 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, StaleElementReferenceException
 from selenium.common.exceptions import ElementClickInterceptedException
-from framework.browser.driver_factory import DriverManager
+from framework.browser.driver_manager import DriverManager
 
 REUSE_NUMBER = 2
 DRIVER_WAIT_TIME = 5

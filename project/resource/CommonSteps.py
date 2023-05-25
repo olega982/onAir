@@ -1,10 +1,10 @@
 import pytest
 from framework.browser.browser_factory import DriverFactory
-from framework.browser.driver_factory import DriverManager
+from framework.browser.driver_manager import DriverManager
 
 # pytest -v -s --browser_name=chrome smoke.py
 # pytest -v -s --language=en smoke.py
-from framework.browser.env_factory import EnvManager
+from framework.browser.env_factory import EnvFactory
 from project.pages.MainPage import on_main_page
 
 CREDENTIALS = 'login, password'
@@ -17,16 +17,16 @@ class CommonSteps:
     def destroy_driver():
         print("\ndestroy browser..\nclear env..")
         DriverFactory.clear_browser_type()
-        EnvManager.clear_env_type()
+        EnvFactory.clear_env_type()
         DriverManager.quit()
 
 
     @staticmethod
     def create_driver():
-        EnvManager.set_type("qa")
+        EnvFactory.set_type("qa")
         DriverFactory.set_type("chrome")
         driver = DriverManager.get_driver()
-        driver.get(EnvManager.get_type())
+        driver.get(EnvFactory.get_type())
 
 
     @staticmethod
