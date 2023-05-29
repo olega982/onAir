@@ -1,7 +1,7 @@
 import pytest
 
 
-class EnvManager:
+class EnvFactory:
     QA_LINK = "https://www.bodum.com/gb/en/"
     DEV_LINK = "https://www.bodum.com/gb/en/"
     PROD_LINK = "https://www.bodum.com/gb/en/"
@@ -10,19 +10,19 @@ class EnvManager:
     @staticmethod
     def set_type(env_type):
         if env_type == "qa":
-            EnvManager.__env_type = EnvManager.QA_LINK
+            EnvFactory.__env_type = EnvFactory.QA_LINK
         elif env_type == "dev":
-            EnvManager.__env_type = EnvManager.DEV_LINK
+            EnvFactory.__env_type = EnvFactory.DEV_LINK
         elif env_type == "prod":
-            EnvManager.__env_type = EnvManager.PROD_LINK
+            EnvFactory.__env_type = EnvFactory.PROD_LINK
         else:
             raise pytest.UsageError("--env should be dev/qa/prod")
 
     @staticmethod
     def get_type():
-        return EnvManager.__env_type
+        return EnvFactory.__env_type
 
     @staticmethod
     def clear_env_type():
-        if EnvManager.__env_type is not None:
-            EnvManager.__env_type = None
+        if EnvFactory.__env_type is not None:
+            EnvFactory.__env_type = None

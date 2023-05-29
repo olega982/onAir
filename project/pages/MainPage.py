@@ -26,7 +26,7 @@ class MainPage:
     def search_result_text(self, x): return BrowserWebElement(XP, f'(//div[@class="suggestionItem__category"])[{x}]')
 
     @classmethod
-    def item_add_to_cart_button(self, x): return BrowserWebElement(XP, f'(//a[@class="simpleCardAppearance"])[{x}]')
+    def item_active(self, x): return BrowserWebElement(XP, f'(//div[@class="simpleCard verticalCard hoverActive"])[{x}]')
 
     """POM functions"""
     @classmethod
@@ -45,7 +45,7 @@ class MainPage:
     def hover_over_item(self, number): self.category_item(number).hover()
 
     @classmethod
-    def click_add_to_cart(self, number):  self.item_add_to_cart_button(number).click()
+    def click_active_item(self, number):  self.item_active(number).click()
 
     @classmethod
     def open_cart(self): self.cart_icon.click()
