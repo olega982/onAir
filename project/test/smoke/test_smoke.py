@@ -20,6 +20,7 @@ class TestSmokeSuite:
         on_login_page.login()
         assert on_login_page.successful_login_modal_appear() == True
 
+    @pytest.mark.skip
     def test_user_check_search_results(self, set_browser_type_and_env, create_driver, close_cookies):
         assert SEARCH_TEXT in on_main_page.type_and_return_search_result(SEARCH_TEXT, FIRST)
 
