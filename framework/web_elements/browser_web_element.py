@@ -29,7 +29,6 @@ class BrowserWebElement:
     def __init__(self, locator_type, locator):
         self.__locator_type = locator_type
         self.__locator = locator
-        self.browser = DriverManager.get_driver()
 
     def get_text(self):
         if self.is_element_present():
@@ -43,15 +42,23 @@ class BrowserWebElement:
             self.find_element())
         hover.perform()
 
+    def is_enabled(self):
+        if self.is_element_present():
+            return DriverManager.get_driver().find_element(self.__locator_type, self.__locator).is_enabled()
+        else:
+            return False
+
     def clear_field(self):
         self.is_element_present()
         self.find_element().send_keys(Keys.CONTROL + "a")
         self.find_element().send_keys(Keys.DELETE)
 
     def find_elements(self):
+        self.is_element_present()
         return DriverManager.get_driver().find_elements(self.__locator_type, self.__locator)
 
     def find_element(self):
+        self.is_element_present()
         return DriverManager.get_driver().find_element(self.__locator_type, self.__locator)
 
     def check_element_visibility(self):

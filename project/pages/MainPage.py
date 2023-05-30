@@ -1,3 +1,4 @@
+from framework.base_page import BasePage
 from framework.web_elements.browser_web_element import BrowserWebElement
 from selenium.webdriver.common.by import By
 
@@ -5,7 +6,7 @@ CSS = By.CSS_SELECTOR
 XP = By.XPATH
 
 
-class MainPage:
+class MainPage(BasePage):
     """Logic and specific Settings"""
     search = BrowserWebElement(By.XPATH, '//input[@placeholder="Search"]')
     search_after_click = BrowserWebElement(By.XPATH, '(//input[@class="searchTriggerCategory"])[2]')
@@ -27,6 +28,7 @@ class MainPage:
 
     @classmethod
     def item_active(self, x): return BrowserWebElement(XP, f'(//div[@class="simpleCard verticalCard hoverActive"])[{x}]')
+
 
     """POM functions"""
     @classmethod
