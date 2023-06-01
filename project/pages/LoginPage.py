@@ -1,4 +1,4 @@
-from framework.base_page import BasePage
+from project.pages.BasePage import BasePage
 from framework.web_elements.browser_web_element import BrowserWebElement
 from selenium.webdriver.common.by import By
 

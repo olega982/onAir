@@ -36,6 +36,10 @@ class BrowserWebElement:
         else:
             "Element is not located"
 
+    def verify_element_text(self, text):
+        return WebDriverWait(DriverManager.get_driver(), DRIVER_WAIT_TIME).until(
+            EC.text_to_be_present_in_element((self.__locator_type, self.__locator), text))
+
     def hover(self):
         self.is_element_present()
         hover = ActionChains(DriverManager.get_driver()).move_to_element(
