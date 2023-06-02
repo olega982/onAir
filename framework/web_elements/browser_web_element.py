@@ -34,7 +34,7 @@ class BrowserWebElement:
         if self.is_element_present():
             return self.find_element().text
         else:
-            "Element is not located"
+            "Element is not located."
 
     def verify_element_text(self, text):
         return WebDriverWait(DriverManager.get_driver(), DRIVER_WAIT_TIME).until(
