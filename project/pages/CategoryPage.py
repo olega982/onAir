@@ -16,6 +16,5 @@ class CategoryPage(BasePage):
         if len(prices) > 1:
             return self.get_float_price(self.item_prices(item_number).find_elements()[1], "£")
         return self.get_float_price(self.item_prices(item_number).find_elements()[0], "£")
-
-
+# New line on code
 on_category_page = CategoryPage()
