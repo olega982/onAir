@@ -1,11 +1,12 @@
 import pytest
 from framework.browser.browser_factory import DriverFactory
 from framework.browser.driver_manager import DriverManager
+from project.pages.MainPage import on_main_page
 
 # pytest -v -s --browser_name=chrome smoke.py
 # pytest -v -s --language=en smoke.py
+
 from framework.browser.env_factory import EnvFactory
-from project.pages.MainPage import on_main_page
 
 CREDENTIALS = 'login, password'
 FIRST_USER_CREDENTIALS = ('gokey36920@aikusy.com', 'Newpassw0rd')
@@ -13,7 +14,7 @@ SECOND_USER_CREDENTIALS = ('mehar43380@abincol.com', 'Newpassw0rd')
 
 
 def pytest_addoption(parser):
-    """Добавляет параметр --browser_name для выбора браузера"""
+    """Adds paramenter --browser_name  to choose the browser"""
     parser.addoption('--browser_name', action='store', default="chrome",
                      help="Choose browser:chrome or firefox")
     parser.addoption('--env', action='store', default='qa',
@@ -42,6 +43,8 @@ def create_driver():
 
 
 @pytest.fixture(scope="function")
-def close_cookies():
-    if on_main_page.cookie_warning.is_element_present():
-        on_main_page.close_warning()
+def close_cookies_and_adds():
+    if on_main_page.cookies_accept_all.is_element_present():
+        on_main_page.cookies_accept_all.click()
+    if on_main_page.modal_banner_close.is_element_present():
+        on_main_page.modal_banner_close.click()

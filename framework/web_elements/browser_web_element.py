@@ -126,9 +126,9 @@ class BrowserWebElement:
             return False
         return True
 
-    def send_simply(self, keys):
+    def type(self, keys):
         try:
-            self.check_element_visibility()
+            self.is_element_present()
             self.find_element().send_keys(keys)
         except TimeoutException:
             return False

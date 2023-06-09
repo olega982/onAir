@@ -2,9 +2,9 @@ import pytest
 
 
 class EnvFactory:
-    QA_LINK = "https://www.bodum.com/gb/en/"
-    DEV_LINK = "https://www.bodum.com/gb/en/"
-    PROD_LINK = "https://www.bodum.com/gb/en/"
+    QA_LINK = "https://www.newegg.com/"
+    DEV_LINK = "https://www.newegg.com/"
+    PROD_LINK = "https://www.newegg.com/"
     __env_type = None
 
     @staticmethod
